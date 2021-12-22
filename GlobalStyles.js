@@ -4,8 +4,11 @@ export default StyleSheet.create({
 
     droidSafeArea:{
         flex: 1,
-         paddingTop:50
+         paddingTop:50,
+         backgroundColor: "#eee",
+         fontFamily:"Apple"
     
         
     }
+
 })
