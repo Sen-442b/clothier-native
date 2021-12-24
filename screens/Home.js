@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, SafeAreaView } from 'react-native'
+import Categories from '../components/Categories';
 import HeaderTabs from "../components/HeaderTabs";
 import SearchBar from '../components/SearchBar';
 import GlobalStyles from "../GlobalStyles";
@@ -10,7 +11,9 @@ export default function Home() {
         <View style={{backgroundColor:"white", padding:10}}>
         <HeaderTabs/>
         <SearchBar/>
+        
         </View>
+        <Categories/>
    
    
         {/* <View>
