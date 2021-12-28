@@ -1,10 +1,13 @@
 import React,{useEffect,useState} from "react";
 import { View, Text, SafeAreaView, ScrollView } from "react-native";
+import BottomTab from "../components/BottomTab";
 import Categories from "../components/Categories";
 import HeaderTabs from "../components/HeaderTabs";
 import SearchBar from "../components/SearchBar";
 import ShopItems, { localShopData } from "../components/ShopItems";
 import GlobalStyles from "../GlobalStyles";
+import { Divider } from 'react-native-elements/dist/divider/Divider';
+
 
 export default function Home() {
   const [dynamicShopsData, setDynamicShopsData] = useState(localShopData);
@@ -16,7 +19,7 @@ export default function Home() {
       <View style={{ backgroundColor: "white", padding: 10 }}>
         <HeaderTabs activeTab={activeTab} setActiveTab={setActiveTab} />
         <SearchBar setCity={setCity} />
-        <Text>{city}</Text>
+        
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
@@ -30,7 +33,8 @@ export default function Home() {
             <Text style={{alignSelf:"center", fontSize:15 }}>K a p r d e w a l a</Text>
           
         </View> */}
-       
+        <Divider width={1}/>
+       <BottomTab/>
     </SafeAreaView>
   );
 }
